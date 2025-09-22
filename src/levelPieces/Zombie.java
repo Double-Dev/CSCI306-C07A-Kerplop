@@ -10,7 +10,7 @@ public class Zombie extends GamePiece implements Moveable {
 	public Zombie(int location) {
 		super('Z', "Zombie", location);
 	}
-
+	
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
 		if (playerLocation < this.getLocation()
@@ -31,5 +31,4 @@ public class Zombie extends GamePiece implements Moveable {
 		}
 		return InteractionResult.NONE;
 	}
-	
 }
