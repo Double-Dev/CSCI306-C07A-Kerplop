@@ -15,7 +15,7 @@ import gameEngine.InteractionResult;
 public abstract class GamePiece implements Drawable {
 	// Interfaces cannot have instance variables
 	protected char symbol;
-	private String label ;
+	private String label;
 	// Stores the piece location, which will be needed to interact
 	// with the player. 
 	private int location;
