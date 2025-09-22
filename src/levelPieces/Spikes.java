@@ -7,9 +7,8 @@ import gameEngine.InteractionResult;
 
 public class Spikes extends GamePiece implements Drawable {
 	
-	public Spikes(char symbol, String label, int location) {
-		super(symbol, label, location);
-		this.symbol = '^';
+	public Spikes(int location) {
+		super('^', "Spikes", location);
 	}
 	
 	@Override

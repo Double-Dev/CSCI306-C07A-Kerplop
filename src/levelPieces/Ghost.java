@@ -16,5 +16,4 @@ public class Ghost extends GamePiece {
 		}
 		return InteractionResult.NONE;
 	}
-	
 }

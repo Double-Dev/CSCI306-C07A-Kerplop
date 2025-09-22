@@ -59,5 +59,4 @@ public class LevelSetup {
 	public int getPlayerStartLoc() {
 		return this.playerStartLoc;
 	}
-
 }
