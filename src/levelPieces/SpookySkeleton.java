@@ -2,17 +2,21 @@ package levelPieces;
 
 import gameEngine.Drawable;
 import gameEngine.InteractionResult;
+import gameEngine.Moveable;
 
-// 1 of the 4 game pieces that do not move but interact with the player.
+// 1 of our 2 moveable game pieces that interacts with the Player
 
-public class Spikes extends GamePiece implements Drawable {
-	
-	public Spikes(char symbol, String label, int location) {
+public class SpookySkeleton extends GamePiece implements Moveable {
+	public SpookySkeleton(char symbol, String label, int location) {
 		super(symbol, label, location);
-		this.symbol = '^';
+		this.symbol = 'W';
 	}
 	
-	@Override
+	
+	public void move(Drawable[] gameBoard, int playerLocation) {
+		
+	}
+	
 	public InteractionResult interact(Drawable [] gameBoard, int playerLocation) {
 		if (playerLocation == this.getLocation()) { // If they are on the same tile, deal damage
 			return InteractionResult.HIT;
@@ -21,5 +25,4 @@ public class Spikes extends GamePiece implements Drawable {
 			return InteractionResult.NONE;
 		}
 	}
-	
 }
