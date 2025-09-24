@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import gameEngine.Drawable;
 import gameEngine.GameEngine;
 import gameEngine.Moveable;
+import gameEngine.Player;
+
 /**
  * LevelSetup class
  * Is the owner of level data, generating it and providing methods for it
@@ -16,6 +18,8 @@ import gameEngine.Moveable;
  * Collaborators: N/A
  * Sources: N/A
  */
+
+
 public class LevelSetup {
 	private Drawable[] scenery;
 	private ArrayList<GamePiece> pieces;
@@ -38,8 +42,36 @@ public class LevelSetup {
 		
 		// Creating new level data:
 		switch (levelNum) {
-		case 1:
-			// TODO: Level 1 design.
+		case 1: // Level 1
+			// Player starts at Spot 0
+			// Zombie Starts at Spot 5
+			// Witch at Spot 15
+			// JackOLanterns at Spots 9 and 20
+			// Spikes at Spots 3 and 12
+			// Webs at Spots 1, 7, 11, and 17
+			Player user = new Player(0);
+			Zombie Z1 = new Zombie(5);
+			Witch W1 = new Witch(15);
+			JackOLantern J1 = new JackOLantern(9);
+			JackOLantern J2 = new JackOLantern(20);
+			Spikes S1 = new Spikes(3);
+			Spikes S2 = new Spikes(13);
+			Webs Web = new Webs();
+			
+			scenery[1] = Web;
+			scenery[7] = Web;
+			scenery[11] = Web;
+			scenery[17] = Web;
+			
+			pieces.add(Z1);
+			pieces.add(W1);
+			pieces.add(J1);
+			pieces.add(J2);
+			pieces.add(S1);
+			pieces.add(S2);
+			
+			moveablePieces.add(Z1);
+			
 			break;
 		case 2:
 			break;
