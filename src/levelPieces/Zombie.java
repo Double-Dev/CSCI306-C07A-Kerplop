@@ -5,6 +5,8 @@ import gameEngine.GameEngine;
 import gameEngine.InteractionResult;
 import gameEngine.Moveable;
 
+// 1 of our 2 moveable game pieces that interacts with the Player
+
 public class Zombie extends GamePiece implements Moveable {
 
 	public Zombie(int location) {
