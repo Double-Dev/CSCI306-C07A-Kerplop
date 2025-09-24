@@ -13,7 +13,7 @@ public class Ghost extends GamePiece {
 
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-		if (this.getLocation() == playerLocation) {
+		if (this.getLocation() == playerLocation) { // Insta-Kill's the player
 			return InteractionResult.KILL;
 		}
 		return InteractionResult.NONE;

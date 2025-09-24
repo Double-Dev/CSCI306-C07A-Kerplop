@@ -13,7 +13,7 @@ public class JackOLantern extends GamePiece {
 
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-		if (this.getLocation() == playerLocation) {
+		if (this.getLocation() == playerLocation) { // Gives the Player a point
 			return InteractionResult.GET_POINT;
 		}
 		return InteractionResult.NONE;
