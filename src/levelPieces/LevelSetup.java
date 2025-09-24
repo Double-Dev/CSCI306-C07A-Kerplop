@@ -5,7 +5,17 @@ import java.util.ArrayList;
 import gameEngine.Drawable;
 import gameEngine.GameEngine;
 import gameEngine.Moveable;
-
+/**
+ * LevelSetup class
+ * Is the owner of level data, generating it and providing methods for it
+ * to be passed back to the GameEngine.
+ * 
+ * @author Deven Layton
+ * @author Joseph Chamberlain
+ * Date: 9/24/2025
+ * Collaborators: N/A
+ * Sources: N/A
+ */
 public class LevelSetup {
 	private Drawable[] scenery;
 	private ArrayList<GamePiece> pieces;

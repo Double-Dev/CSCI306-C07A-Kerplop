@@ -4,9 +4,19 @@ import gameEngine.Drawable;
 import gameEngine.GameEngine;
 import gameEngine.InteractionResult;
 import gameEngine.Moveable;
-
-// 1 of our 2 moveable game pieces that interacts with the Player
-
+/**
+ * Zombie class
+ * Zombies will always try to move 1 space towards the player, but will
+ * not move if another object is in their way. If they are on the same
+ * space as the player, they will hit them.
+ * 1 of our 2 moveable game pieces that interact with the player.
+ * 
+ * @author Deven Layton
+ * @author Joseph Chamberlain
+ * Date: 9/24/2025
+ * Collaborators: N/A
+ * Sources: N/A
+ */
 public class Zombie extends GamePiece implements Moveable {
 
 	public Zombie(int location) {
