@@ -15,7 +15,7 @@ public class Zombie extends GamePiece implements Moveable {
 	
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
-		if (playerLocation < this.getLocation()
+		if (playerLocation < this.getLocation() // Always moves towards the player if possible.
 				&& this.getLocation() > 0
 				&& gameBoard[this.getLocation()-1] == null) {
 			this.setLocation(this.getLocation()-1);
@@ -28,7 +28,7 @@ public class Zombie extends GamePiece implements Moveable {
 
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-		if (this.getLocation() == playerLocation) {
+		if (this.getLocation() == playerLocation) { // If they are on the same tile, deal damage
 			return InteractionResult.HIT;
 		}
 		return InteractionResult.NONE;
