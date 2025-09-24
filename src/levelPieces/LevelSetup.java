@@ -51,6 +51,7 @@ public class LevelSetup {
 	}
 
 	public Drawable[] getBoard() {
+		// Creating a duplicate of the current board state to pass back to the GameEngine
 		Drawable[] board = this.scenery.clone();
 		for (GamePiece piece : this.pieces) {
 			board[piece.getLocation()] = piece;
