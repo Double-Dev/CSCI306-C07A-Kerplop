@@ -15,19 +15,15 @@ import gameEngine.InteractionResult;
  * Sources: N/A
  */
 public class Spikes extends GamePiece implements Drawable {
-	
 	public Spikes(int location) {
 		super('^', "Spikes", location);
 	}
 	
 	@Override
 	public InteractionResult interact(Drawable [] gameBoard, int playerLocation) {
-		if (playerLocation == this.getLocation()) { // If they are on the same tile, deal damage
+		if (playerLocation == this.getLocation()) {
 			return InteractionResult.HIT;
 		}
-		else {
-			return InteractionResult.NONE;
-		}
+		return InteractionResult.NONE;
 	}
-	
 }

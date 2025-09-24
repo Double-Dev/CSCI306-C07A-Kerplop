@@ -18,17 +18,16 @@ import gameEngine.Moveable;
  * Sources: N/A
  */
 public class SpookySkeleton extends GamePiece implements Moveable {
-	private java.util.Random rand = new java.util.Random();
+	private static final java.util.Random rand = new java.util.Random();
 	
 	public SpookySkeleton(int location) {
 		super('W', "Spooky Scary Skeleton!", location);
 	}
 	
-	
-	public void move(Drawable[] gameBoard, int playerLocation) { // A wildcard that can move anywhere from 2 to the left or 2 to the right
+	public void move(Drawable[] gameBoard, int playerLocation) {
 		int move = rand.nextInt(5) - 2; // Chooses a random number to move from -2 to 2
 		
-		// Move to the generated spot only if nothing is there.
+		// Move to the generated amount only if nothing is there.
 		if (gameBoard[this.getLocation() + move] == null) {
 			gameBoard[this.getLocation()] = null;
 			this.setLocation(this.getLocation() + move);
@@ -37,10 +36,9 @@ public class SpookySkeleton extends GamePiece implements Moveable {
 	}
 	
 	public InteractionResult interact(Drawable [] gameBoard, int playerLocation) {
-		if (playerLocation == this.getLocation()) { // If they are on the same tile, deal damage
+		if (playerLocation == this.getLocation()) {
 			return InteractionResult.HIT;
-		} else {
-			return InteractionResult.NONE;
 		}
+		return InteractionResult.NONE;
 	}
 }

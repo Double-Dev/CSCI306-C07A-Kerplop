@@ -25,12 +25,14 @@ public class Zombie extends GamePiece implements Moveable {
 	
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
-		if (playerLocation < this.getLocation() // Always moves towards the player if possible.
+		// Always moves towards the player if possible, while staying within level boundaries.
+		// Doesn't move into occupied spaces.
+		if (playerLocation < this.getLocation() // Checking if left move is valid
 				&& this.getLocation() >= 0
 				&& gameBoard[this.getLocation()-1] == null) {
 			gameBoard[this.getLocation()] = null;
 			this.setLocation(this.getLocation()-1);
-		} else if (playerLocation > this.getLocation()
+		} else if (playerLocation > this.getLocation() // Checking if right move is valid
 				&& this.getLocation() < GameEngine.BOARD_SIZE
 				&& gameBoard[this.getLocation()+1] == null) {
 			gameBoard[this.getLocation()] = null;
@@ -41,7 +43,7 @@ public class Zombie extends GamePiece implements Moveable {
 
 	@Override
 	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-		if (this.getLocation() == playerLocation) { // If they are on the same tile, deal damage
+		if (this.getLocation() == playerLocation) {
 			return InteractionResult.HIT;
 		}
 		return InteractionResult.NONE;

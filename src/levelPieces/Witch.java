@@ -22,11 +22,9 @@ public class Witch extends GamePiece implements Drawable {
 	
 	@Override
 	public InteractionResult interact(Drawable [] gameBoard, int playerLocation) {
-		if (playerLocation == (this.getLocation() - 2)) { 
-			return InteractionResult.HIT; // If they are 2 tiles to the left, deal damage.
+		if (playerLocation == (this.getLocation() - 2)) {
+			return InteractionResult.HIT;
 		}
-		else { // Once you reach the witch or pass her, you are safe
-			return InteractionResult.NONE;
-		}
+		return InteractionResult.NONE;
 	}
 }
