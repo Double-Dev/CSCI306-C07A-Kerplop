@@ -1,0 +1,137 @@
+I, Deven Layton, certify that I participated equitably in the creation of assignment C07A-KerPlop, dated 9/24/25.
+I, Joseph Chamberlain, certify that I participated equitably in the creation of this assignment C07A-KerPlop, dated 9/24/25.
+
+
+commit e7c4d5f0a2e596aaf3a4684eb48e8e2b594464e5
+Author: double-dev <deven.layton@gmail.com>
+Date:   Wed Sep 24 15:33:31 2025 -0600
+
+    dlayton Added GamePieces.txt
+
+commit 1ea9ee987b1fa1aed3087de1ee9346bbef00d2b5
+Author: double-dev <deven.layton@gmail.com>
+Date:   Wed Sep 24 15:26:25 2025 -0600
+
+    dlayton Comments and minor code cleanup.
+
+commit 7585f7babca1ff1a9bc4b99bd1550ed95c78c93d
+Author: double-dev <deven.layton@gmail.com>
+Date:   Wed Sep 24 15:14:41 2025 -0600
+
+    dlayton Bug fixes for piece movement and JackOLantern collection.
+
+commit 29135d946179660b1bb4e188daefa17ef85951db
+Author: double-dev <deven.layton@gmail.com>
+Date:   Wed Sep 24 14:41:46 2025 -0600
+
+    dlayton Added level 2 design to Level Setup.
+
+commit c7327399bb61c051fdaadc29435d329cf28ee32e
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Wed Sep 24 14:35:09 2025 -0600
+
+    JC - Created level 1
+
+commit 59d1821fb315382dc3d8dfbdbed89a32b848b10f
+Author: double-dev <deven.layton@gmail.com>
+Date:   Wed Sep 24 14:22:24 2025 -0600
+
+    dlayton Simplified Web class.
+
+commit daf0c86a09db7e0461e6c29c95a65ffb0a228ad0
+Author: double-dev <deven.layton@gmail.com>
+Date:   Wed Sep 24 14:17:22 2025 -0600
+
+    dlayton Added class header comments.
+
+commit aef3be68f4c46c56286d18abdfe7f0378bdb3710
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Wed Sep 24 13:56:46 2025 -0600
+
+    JC - Added comments to Zombie
+
+commit b3552c0bf27ae4bfcdd35ae7be26ec8a95184207
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Wed Sep 24 13:49:21 2025 -0600
+
+    JC - Added all the necessary comments
+
+commit 0d82db38dbdec5072d080dcc9dc8c186cb7e2b04
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Wed Sep 24 13:46:29 2025 -0600
+
+    JC - Implemented Witch and added comments to track types of GamePieces
+
+commit 5a290763aec9abc3110318c3c78473dd437b521e
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Tue Sep 23 21:33:11 2025 -0600
+
+    JC - Finished implementing Spooky Scary Skeleton
+
+commit b303c95daf25916822d66bd5e86f62dce9774a6b
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Mon Sep 22 15:57:26 2025 -0600
+
+    JC - Created the Witch class to be implemented later
+
+commit d5f8b4b57579b2859fdce67192e374fd6779c107
+Author: double-dev <deven.layton@gmail.com>
+Date:   Mon Sep 22 15:06:29 2025 -0600
+
+    dlayton Modified Spikes constructor to remove unnecessary parameters.
+
+commit 5dc4c22ac1e0786c9558fa0a882fb275fa6694ba
+Merge: c504121 1c9417f
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Mon Sep 22 15:05:41 2025 -0600
+
+    Merge branch 'master' of https://github.com/Double-Dev/CSCI306-C07A-Kerplop
+
+commit c504121d53be5963f19395c42c3f50220bb0d21e
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Mon Sep 22 15:05:15 2025 -0600
+
+    JC - Working on Spooky Scary Skeleton
+
+commit 1c9417fc427486cf860c71f0da874cb8cfc75ef5
+Author: double-dev <deven.layton@gmail.com>
+Date:   Mon Sep 22 15:01:44 2025 -0600
+
+    dlayton Added Ghost piece.
+
+commit a925d96ccc41f3f35c9dcffe60401c23dd680dd5
+Author: double-dev <deven.layton@gmail.com>
+Date:   Mon Sep 22 14:55:25 2025 -0600
+
+    dlayton Added JackOLantern and Zombie pieces.
+
+commit 8bc77f5fff3a1bbbfdb04bafbde39b113f9f1ab4
+Merge: 342c153 12788c0
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Mon Sep 22 14:46:53 2025 -0600
+
+    Merge branch 'master' of https://github.com/Double-Dev/CSCI306-C07A-Kerplop
+
+commit 342c1536a78a9efd2e4a686bfa7e91814ad9d916
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Mon Sep 22 14:46:51 2025 -0600
+
+    JC - Created Webs and Spikes classes
+
+commit 12788c0958765e7ba31858c55c507aaed77ffc8a
+Author: double-dev <deven.layton@gmail.com>
+Date:   Mon Sep 22 14:35:41 2025 -0600
+
+    dlayton Implemented LevelSetup except for createLevel() logic.
+
+commit 1a622e1cd0cb6c28b531e15350b9623f4bde4c29
+Author: double-dev <deven.layton@gmail.com>
+Date:   Thu Sep 18 11:29:24 2025 -0600
+
+    dlayton Added readme.txt.
+
+commit b3ceee77bbbefd864fc0fd0971a489ffe30f3fdc
+Author: double-dev <deven.layton@gmail.com>
+Date:   Thu Sep 18 11:24:58 2025 -0600
+
+    dlayton Added starter files.
