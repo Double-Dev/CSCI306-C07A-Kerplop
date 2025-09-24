@@ -20,7 +20,7 @@ import gameEngine.Moveable;
 public class SpookySkeleton extends GamePiece implements Moveable {
 	private java.util.Random rand = new java.util.Random();
 	
-	public SpookySkeleton(char symbol, String label, int location) {
+	public SpookySkeleton(int location) {
 		super('W', "Spooky Scary Skeleton!", location);
 	}
 	

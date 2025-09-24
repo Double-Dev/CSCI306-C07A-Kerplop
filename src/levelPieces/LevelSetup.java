@@ -74,6 +74,29 @@ public class LevelSetup {
 			
 			break;
 		case 2:
+			this.playerStartLoc = 0;
+			// Webs
+			this.scenery[8] = new Webs();
+			this.scenery[10] = new Webs();
+			this.scenery[12] = new Webs();
+			this.scenery[13] = new Webs();
+			// Ghosts
+			this.pieces.add(new Ghost(2));
+			this.pieces.add(new Ghost(4));
+			this.pieces.add(new Ghost(6));
+			// JackOLanterns
+			this.pieces.add(new JackOLantern(7));
+			this.pieces.add(new JackOLantern(19));
+			// Skeleton
+			SpookySkeleton skeleton = new SpookySkeleton(11);
+			this.pieces.add(skeleton);
+			this.moveablePieces.add(skeleton);
+			// Zombie
+			Zombie zombie = new Zombie(15);
+			this.pieces.add(zombie);
+			this.moveablePieces.add(zombie);
+			// Spikes
+			this.pieces.add(new Spikes(19));
 			break;
 			// TODO: Level 2 design.
 		default:
