@@ -1,0 +1,26 @@
+Drawable Piece:
+(#) - Webs are an object that just gets drawn on the board with no additional behavior.
+
+Moveable Piece (1/2):
+(W) - SpookySkeletons can move randomly in a range of 2 spaces to the left to 2 spaces
+to the right (including staying in the same spot). They hit the player if they
+interact (move to the same spot).
+
+Moveable Piece (2/2):
+(Z) - Zombies will always try to move 1 space towards the player, but will
+not move if another object is in their way. If they can move to the same
+space as the player, they will hit them.
+
+Non-Moveable Interactable Piece (1/4):
+(&) - Ghosts stay in a single spot, but instantly kill the player when they interact with them.
+
+Non-Moveable Interactable Piece (2/4):
+(@) - JackOLanterns stay in the same spot and give a point to the player when
+they interact. Afterwards, the JackOLantern's symbol changes to indicate
+that it has been collected.
+
+Non-Moveable Interactable Piece (3/4):
+(^) - Spikes stay in a single spot and hit the player when they interact with them.
+
+Non-Moveable Interactable Piece (4/4):
+(V) - Witches stay in the same place but can hit the player if they are 2 spaces to the left of them.
