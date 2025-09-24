@@ -26,14 +26,17 @@ public class Zombie extends GamePiece implements Moveable {
 	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
 		if (playerLocation < this.getLocation() // Always moves towards the player if possible.
-				&& this.getLocation() > 0
+				&& this.getLocation() >= 0
 				&& gameBoard[this.getLocation()-1] == null) {
+			gameBoard[this.getLocation()] = null;
 			this.setLocation(this.getLocation()-1);
 		} else if (playerLocation > this.getLocation()
-				&& this.getLocation() < GameEngine.BOARD_SIZE-1
+				&& this.getLocation() < GameEngine.BOARD_SIZE
 				&& gameBoard[this.getLocation()+1] == null) {
+			gameBoard[this.getLocation()] = null;
 			this.setLocation(this.getLocation()+1);
 		}
+		gameBoard[this.getLocation()] = this;
 	}
 
 	@Override

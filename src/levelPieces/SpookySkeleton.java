@@ -26,13 +26,13 @@ public class SpookySkeleton extends GamePiece implements Moveable {
 	
 	
 	public void move(Drawable[] gameBoard, int playerLocation) { // A wildcard that can move anywhere from 2 to the left or 2 to the right
-		int[] moving = {-2, -1, 0, 1, 2};
-		int randnum = rand.nextInt(5) - 1;
-		int leap = moving[randnum]; // Chooses a random number to move from -2 to 2
+		int move = rand.nextInt(5) - 2; // Chooses a random number to move from -2 to 2
 		
 		// Move to the generated spot only if nothing is there.
-		if (gameBoard[this.getLocation() + leap] != null) {
-			this.setLocation(this.getLocation() + leap);
+		if (gameBoard[this.getLocation() + move] == null) {
+			gameBoard[this.getLocation()] = null;
+			this.setLocation(this.getLocation() + move);
+			gameBoard[this.getLocation()] = this;
 		}
 	}
 	

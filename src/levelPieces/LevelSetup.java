@@ -40,22 +40,23 @@ public class LevelSetup {
 		this.pieces.clear();
 		this.moveablePieces.clear();
 		
-		// Creating new level data:
-		switch (levelNum) {
-		case 1: // Level 1
+		if (levelNum > GameEngine.NUM_LEVELS) {
+			return; // This will result in an empty level.
+		} else if (levelNum == 1) {
 			// Player starts at Spot 0
 			// Zombie Starts at Spot 5
-			// Witch at Spot 15
+			// Witch at Spot 16
 			// JackOLanterns at Spots 9 and 20
 			// Spikes at Spots 3 and 12
 			// Webs at Spots 1, 7, 11, and 17
-			Player user = new Player(0);
+			this.playerStartLoc = 0;
+			
 			Zombie Z1 = new Zombie(5);
-			Witch W1 = new Witch(15);
+			Witch W1 = new Witch(16);
 			JackOLantern J1 = new JackOLantern(9);
 			JackOLantern J2 = new JackOLantern(20);
 			Spikes S1 = new Spikes(3);
-			Spikes S2 = new Spikes(13);
+			Spikes S2 = new Spikes(12);
 			Webs Web = new Webs();
 			
 			scenery[1] = Web;
@@ -71,9 +72,7 @@ public class LevelSetup {
 			pieces.add(S2);
 			
 			moveablePieces.add(Z1);
-			
-			break;
-		case 2:
+		} else if (levelNum == 2) {
 			this.playerStartLoc = 0;
 			// Webs
 			this.scenery[8] = new Webs();
@@ -86,7 +85,7 @@ public class LevelSetup {
 			this.pieces.add(new Ghost(6));
 			// JackOLanterns
 			this.pieces.add(new JackOLantern(7));
-			this.pieces.add(new JackOLantern(19));
+			this.pieces.add(new JackOLantern(20));
 			// Skeleton
 			SpookySkeleton skeleton = new SpookySkeleton(11);
 			this.pieces.add(skeleton);
@@ -97,11 +96,6 @@ public class LevelSetup {
 			this.moveablePieces.add(zombie);
 			// Spikes
 			this.pieces.add(new Spikes(19));
-			break;
-			// TODO: Level 2 design.
-		default:
-			// Error
-			break;
 		}
 	}
 
