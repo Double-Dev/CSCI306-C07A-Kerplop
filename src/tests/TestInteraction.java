@@ -13,7 +13,17 @@ import levelPieces.Spikes;
 import levelPieces.SpookySkeleton;
 import levelPieces.Witch;
 import levelPieces.Zombie;
-
+/**
+ * TestInteraction class
+ * Contains a set of tests that verify that the interaction of each Piece is
+ * behaving correctly.
+ * 
+ * @author Deven Layton
+ * @author Joseph Chamberlain
+ * Date: 9/26/2025
+ * Collaborators: N/A
+ * Sources: N/A
+ */
 public class TestInteraction {
 	/*
 	 * Tests ContactDamagePiece, used by Spikes, SpookySkeleton, and Zombie
