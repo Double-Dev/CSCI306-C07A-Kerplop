@@ -2,7 +2,6 @@ package levelPieces;
 
 import gameEngine.Drawable;
 import gameEngine.GameEngine;
-import gameEngine.InteractionResult;
 import gameEngine.Moveable;
 /**
  * Zombie class

@@ -21,7 +21,7 @@ import levelPieces.Zombie;
  * Collaborators: N/A
  * Sources: N/A
  */
-public class TestMovement {
+public class TestMovingPieces {
 	/*
 	 * Tests Zombie's unique movement.
 	 * 
@@ -88,10 +88,9 @@ public class TestMovement {
 			skeleton.setLocation(gameBoard, 10);
 			skeleton.move(gameBoard, 0);
 			int location = skeleton.getLocation();
-//			System.out.println(location);
-//			if (location < 8 || location > 12) {
-//				fail("Invalid move detected!");
-//			}
+			if (location < 8 || location > 12) {
+				fail("Invalid move detected!");
+			}
 			if (location == 8) countLeftJump++;
 			if (location == 9) countLeft++;
 			if (location == 10) countStay++;

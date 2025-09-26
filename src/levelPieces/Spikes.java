@@ -1,7 +1,6 @@
 package levelPieces;
 
 import gameEngine.Drawable;
-import gameEngine.InteractionResult;
 /**
  * Spikes class
  * Spikes stay in a single spot and hit the player when they interact

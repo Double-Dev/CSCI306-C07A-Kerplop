@@ -2,6 +2,129 @@ I, Deven Layton, certify that I participated equitably in the creation of assign
 I, Joseph Chamberlain, certify that I participated equitably in the creation of this assignment C07A-KerPlop, dated 9/24/25.
 
 
+commit c8761118fe5a3a63f16ac84f9862358ac706e97c
+Author: double-dev <deven.layton@gmail.com>
+Date:   Fri Sep 26 16:09:06 2025 -0600
+
+    dlayton Resolved merge conflict.
+
+commit 9fc9642ca3ce5f91e27051dc759a409c36ccfe11
+Merge: 23e890f b16e298
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Fri Sep 26 16:07:02 2025 -0600
+
+    Merge branch 'master' of https://github.com/Double-Dev/CSCI306-C07A-Kerplop
+
+commit 23e890fbfc83c4fbde719b85b3c9100da25bf31a
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Fri Sep 26 16:06:53 2025 -0600
+
+    JC - Removed the merge conflict text
+
+commit b16e298e2acc9ca1c8f6958e72b707d603c3dffc
+Author: double-dev <deven.layton@gmail.com>
+Date:   Fri Sep 26 16:02:21 2025 -0600
+
+    dlayton Fixed more formatting.
+
+commit 010d6109dfeecff996781c36e8d9f790dc75363b
+Author: double-dev <deven.layton@gmail.com>
+Date:   Fri Sep 26 16:02:00 2025 -0600
+
+    dlayton Fixed comment formatting.
+
+commit f15a91bbf5c02a765da550f43af04c5e21b4fd7f
+Author: double-dev <deven.layton@gmail.com>
+Date:   Fri Sep 26 16:01:16 2025 -0600
+
+    dlayton Removed unnecessary imports.
+
+commit 599f2e140980a3e4c619e1825f34b3ee226cc47a
+Merge: 91db949 a38d4a1
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Fri Sep 26 16:00:00 2025 -0600
+
+    JC - Update GamePieces.txt
+
+commit a38d4a1280df620f7dd19cc550264cebcf1007fe
+Author: double-dev <deven.layton@gmail.com>
+Date:   Fri Sep 26 15:55:31 2025 -0600
+
+    dlayton Modified GamePieces.txt
+
+commit 91db94967b4daa83e0bb753069bbface66903387
+Merge: c5592b9 01f29cd
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Fri Sep 26 15:55:02 2025 -0600
+
+    Merge branch 'master' of https://github.com/Double-Dev/CSCI306-C07A-Kerplop
+
+commit c5592b9e4a14d942ccca02aede1040f36a4ac2f9
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Fri Sep 26 15:53:35 2025 -0600
+
+    JC - Changed how the skeleton attacks
+
+commit 01f29cd7655eb11c8a5ca433d819e02ab0c8e66d
+Author: double-dev <deven.layton@gmail.com>
+Date:   Fri Sep 26 15:50:02 2025 -0600
+
+    dlayton Refactored SpookySkeleton iteraction test.
+
+commit dc05aa6083fea3c1a91f12d3559b3fea56706c62
+Author: double-dev <deven.layton@gmail.com>
+Date:   Fri Sep 26 15:46:34 2025 -0600
+
+    dlayton Fixed bug in GamePiece that was messing with tests.
+
+commit d5d466ac1ce5325c7ad5fe9dea618c72cdb2c424
+Author: double-dev <deven.layton@gmail.com>
+Date:   Fri Sep 26 15:10:02 2025 -0600
+
+    dlayton Added test for SpookySkeleton movement.
+
+commit 62f7f54a5f667c2e3dde3797e6182c8108e47441
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Fri Sep 26 15:04:32 2025 -0600
+
+    JC - edited comments
+
+commit 0e07260f597551c6c94399ef4de55cf9ffffd6ea
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Fri Sep 26 14:48:51 2025 -0600
+
+    JC - Added test for ranged characters
+
+commit 52865294a1e8d7918c06b1e489b0116ea873abaa
+Author: double-dev <deven.layton@gmail.com>
+Date:   Fri Sep 26 14:43:06 2025 -0600
+
+    dlayton Added test for Ghost interaction.
+
+commit cf3153166238b609459f7eac17d3cb348495e6dd
+Author: Kazahana45 <josephchamberlain46@gmail.com>
+Date:   Fri Sep 26 14:42:06 2025 -0600
+
+    JC - Added interaction tests for skeleton, and spikes
+
+commit a0fd91c1379669d83adb4a4242520157566b2daf
+Author: double-dev <deven.layton@gmail.com>
+Date:   Fri Sep 26 14:35:47 2025 -0600
+
+    dlayton Added tests for ContactDamage interaction, Zombie movement, & JackOLantern interaction.
+
+commit 423d0bf28d0f1d9c8a6e39bdbcecfc0d887d9599
+Author: double-dev <deven.layton@gmail.com>
+Date:   Fri Sep 26 14:18:58 2025 -0600
+
+    dlayton Abstracted interaction logic for classes that use contact damage.
+
+commit 61c45b669d8fc00dac7b0b6ccac278441b782f2b
+Author: double-dev <deven.layton@gmail.com>
+Date:   Wed Sep 24 16:20:46 2025 -0600
+
+    Added additional files for submission.
+
 commit e7c4d5f0a2e596aaf3a4684eb48e8e2b594464e5
 Author: double-dev <deven.layton@gmail.com>
 Date:   Wed Sep 24 15:33:31 2025 -0600

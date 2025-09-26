@@ -14,7 +14,7 @@ import levelPieces.SpookySkeleton;
 import levelPieces.Witch;
 import levelPieces.Zombie;
 /**
- * TestInteraction class
+ * TestInteractions class
  * Contains a set of tests that verify that the interaction of each Piece is
  * behaving correctly.
  * 
@@ -24,7 +24,7 @@ import levelPieces.Zombie;
  * Collaborators: N/A
  * Sources: N/A
  */
-public class TestInteraction {
+public class TestInteractions {
 	/*
 	 * Tests ContactDamagePiece, used by Spikes, SpookySkeleton, and Zombie
 	 * Should output a HIT when the player is on the same location.
@@ -83,7 +83,8 @@ public class TestInteraction {
 	
 	/*
 	 * Tests SpookySkeleton Interaction
-	 * Should output a HIT when the player is on either side of it
+	 * Should output a HIT when the player is on either side of it (but not 
+	 * if they're on the same space).
 	 */
 	@Test
 	public void testSkeletonInteraction() {

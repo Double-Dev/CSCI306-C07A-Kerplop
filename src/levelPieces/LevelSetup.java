@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import gameEngine.Drawable;
 import gameEngine.GameEngine;
 import gameEngine.Moveable;
-import gameEngine.Player;
 
 /**
  * LevelSetup class
