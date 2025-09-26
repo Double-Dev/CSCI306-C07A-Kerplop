@@ -29,12 +29,12 @@ public class Zombie extends ContactDamagePiece implements Moveable {
 		// Doesn't move into occupied spaces.
 		if (playerLocation < this.getLocation() // Checking if left move is valid
 				&& this.getLocation() >= 0
-				&& gameBoard[this.getLocation()-1] == null) {
+				&& gameBoard[Math.max(0, this.getLocation()-1)] == null) {
 			gameBoard[this.getLocation()] = null;
 			this.setLocation(this.getLocation()-1);
 		} else if (playerLocation > this.getLocation() // Checking if right move is valid
 				&& this.getLocation() < GameEngine.BOARD_SIZE
-				&& gameBoard[this.getLocation()+1] == null) {
+				&& gameBoard[Math.min(GameEngine.BOARD_SIZE-1, this.getLocation()+1)] == null) {
 			gameBoard[this.getLocation()] = null;
 			this.setLocation(this.getLocation()+1);
 		}

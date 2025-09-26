@@ -71,10 +71,15 @@ public abstract class GamePiece implements Drawable {
 			location = newLocation;
 	}
 	
+	/**
+	 * @return piece's symbol
+	 */
+	public char getSymbol() {
+		return this.symbol;
+	}
+	
 	@Override
 	public String toString() {
 		return symbol + " - " + label; 
 	}
-	
-
 }
