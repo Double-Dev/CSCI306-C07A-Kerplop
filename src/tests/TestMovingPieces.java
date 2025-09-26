@@ -90,12 +90,17 @@ public class TestMovingPieces {
 			int location = skeleton.getLocation();
 			if (location < 8 || location > 12) {
 				fail("Invalid move detected!");
+			} else if (location == 8) {
+				countLeftJump++;
+			} else if (location == 9) {
+				countLeft++;
+			} else if (location == 10) {
+				countStay++;
+			} else if (location == 11) {
+				countRight++;
+			} else if (location == 12)  {
+				countRightJump++;
 			}
-			if (location == 8) countLeftJump++;
-			if (location == 9) countLeft++;
-			if (location == 10) countStay++;
-			if (location == 11) countRight++;
-			if (location == 12) countRightJump++;
 		}
 		//  - Ensuring that each of the random options occurs at least once.
 		assert(countLeftJump > 10);
