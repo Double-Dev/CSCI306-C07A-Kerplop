@@ -8,6 +8,8 @@ import gameEngine.Drawable;
 import gameEngine.GameEngine;
 import gameEngine.InteractionResult;
 import levelPieces.JackOLantern;
+import levelPieces.Spikes;
+import levelPieces.SpookySkeleton;
 import levelPieces.Zombie;
 
 public class TestInteraction {
@@ -20,7 +22,11 @@ public class TestInteraction {
 		Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		// Using Zombie as arbitrary non-abstract child to test this.
 		Zombie zombie = new Zombie(10);
+		Spikes spikes = new Spikes(10);
+		SpookySkeleton spook = new SpookySkeleton(10);
 		assertEquals(zombie.interact(gameBoard, 10), InteractionResult.HIT);
+		assertEquals(spikes.interact(gameBoard, 10), InteractionResult.HIT);
+		assertEquals(spook.interact(gameBoard, 10), InteractionResult.HIT);
 	}
 	
 	/*
