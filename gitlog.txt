@@ -1,6 +1,18 @@
-I, Deven Layton, certify that I participated equitably in the creation of assignment C07A-KerPlop, dated 9/24/25.
-I, Joseph Chamberlain, certify that I participated equitably in the creation of this assignment C07A-KerPlop, dated 9/24/25.
+I, Deven Layton, certify that I participated equitably in the creation of assignment C07A-KerPlop/C09A-KerPlop, dated 9/26/25.
+I, Joseph Chamberlain, certify that I participated equitably in the creation of this assignment C07A-KerPlop/C09A-KerPlop, dated 9/26/25.
 
+
+commit 3a8b62d53c55ad3d867c86c0976084ff4dd97835
+Author: double-dev <deven.layton@gmail.com>
+Date:   Fri Sep 26 16:30:02 2025 -0600
+
+    dlayton Updated if-statment block to follow class coding standards.
+
+commit e47c70ce76f0ff00fcf0cff4682407c6eec881a4
+Author: double-dev <deven.layton@gmail.com>
+Date:   Fri Sep 26 16:26:58 2025 -0600
+
+    dlayton Refactored class names to match assignment specification.
 
 commit c8761118fe5a3a63f16ac84f9862358ac706e97c
 Author: double-dev <deven.layton@gmail.com>

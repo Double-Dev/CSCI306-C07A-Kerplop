@@ -74,7 +74,7 @@ public class TestMovingPieces {
 	 *  - Doesn't move onto other drawables.
 	 */
 	@Test
-	public void testSpookySkeleton() {
+	public void testSpookySkeletonMovement() {
 		Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		SpookySkeleton skeleton = new SpookySkeleton(10);
 		
