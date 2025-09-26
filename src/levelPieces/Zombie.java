@@ -13,11 +13,11 @@ import gameEngine.Moveable;
  * 
  * @author Deven Layton
  * @author Joseph Chamberlain
- * Date: 9/24/2025
+ * Date: 9/26/2025
  * Collaborators: N/A
  * Sources: N/A
  */
-public class Zombie extends GamePiece implements Moveable {
+public class Zombie extends ContactDamagePiece implements Moveable {
 
 	public Zombie(int location) {
 		super('Z', "Zombie", location);
@@ -39,13 +39,5 @@ public class Zombie extends GamePiece implements Moveable {
 			this.setLocation(this.getLocation()+1);
 		}
 		gameBoard[this.getLocation()] = this;
-	}
-
-	@Override
-	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
-		if (this.getLocation() == playerLocation) {
-			return InteractionResult.HIT;
-		}
-		return InteractionResult.NONE;
 	}
 }

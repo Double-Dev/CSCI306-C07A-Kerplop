@@ -15,7 +15,6 @@ import gameEngine.InteractionResult;
  * Sources: N/A
  */
 public class Ghost extends GamePiece {
-
 	public Ghost(int location) {
 		super('&', "Ghost", location);
 	}

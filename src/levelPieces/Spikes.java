@@ -10,20 +10,12 @@ import gameEngine.InteractionResult;
  * 
  * @author Deven Layton
  * @author Joseph Chamberlain
- * Date: 9/24/2025
+ * Date: 9/26/2025
  * Collaborators: N/A
  * Sources: N/A
  */
-public class Spikes extends GamePiece implements Drawable {
+public class Spikes extends ContactDamagePiece implements Drawable {
 	public Spikes(int location) {
 		super('^', "Spikes", location);
-	}
-	
-	@Override
-	public InteractionResult interact(Drawable [] gameBoard, int playerLocation) {
-		if (playerLocation == this.getLocation()) {
-			return InteractionResult.HIT;
-		}
-		return InteractionResult.NONE;
 	}
 }

@@ -13,17 +13,18 @@ import gameEngine.Moveable;
  * 
  * @author Deven Layton
  * @author Joseph Chamberlain
- * Date: 9/24/2025
+ * Date: 9/26/2025
  * Collaborators: N/A
  * Sources: N/A
  */
-public class SpookySkeleton extends GamePiece implements Moveable {
+public class SpookySkeleton extends ContactDamagePiece implements Moveable {
 	private static final java.util.Random rand = new java.util.Random();
 	
 	public SpookySkeleton(int location) {
 		super('W', "Spooky Scary Skeleton!", location);
 	}
 	
+	@Override
 	public void move(Drawable[] gameBoard, int playerLocation) {
 		int move = rand.nextInt(5) - 2; // Chooses a random number to move from -2 to 2
 		
@@ -33,12 +34,5 @@ public class SpookySkeleton extends GamePiece implements Moveable {
 			this.setLocation(this.getLocation() + move);
 			gameBoard[this.getLocation()] = this;
 		}
-	}
-	
-	public InteractionResult interact(Drawable [] gameBoard, int playerLocation) {
-		if (playerLocation == this.getLocation()) {
-			return InteractionResult.HIT;
-		}
-		return InteractionResult.NONE;
 	}
 }
