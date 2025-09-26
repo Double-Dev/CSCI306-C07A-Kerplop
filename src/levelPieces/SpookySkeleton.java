@@ -17,7 +17,7 @@ import gameEngine.Moveable;
  * Collaborators: N/A
  * Sources: N/A
  */
-public class SpookySkeleton extends ContactDamagePiece implements Moveable {
+public class SpookySkeleton extends GamePiece implements Moveable {
 	private static final java.util.Random rand = new java.util.Random();
 	
 	public SpookySkeleton(int location) {
@@ -34,5 +34,13 @@ public class SpookySkeleton extends ContactDamagePiece implements Moveable {
 			this.setLocation(this.getLocation() + move);
 			gameBoard[this.getLocation()] = this;
 		}
+	}
+
+	@Override
+	public InteractionResult interact(Drawable[] gameBoard, int playerLocation) {
+		if (playerLocation == (this.getLocation() + 1) || playerLocation == (this.getLocation() - 1)) {
+			return InteractionResult.HIT;
+		}
+			return InteractionResult.NONE;
 	}
 }
