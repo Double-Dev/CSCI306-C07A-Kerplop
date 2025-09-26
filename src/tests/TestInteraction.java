@@ -22,7 +22,6 @@ public class TestInteraction {
 	@Test
 	public void testContactDamageInteraction() {
 		Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
-		// Using Zombie as arbitrary non-abstract child to test this.
 		Zombie zombie = new Zombie(10);
 		Spikes spikes = new Spikes(10);
 		SpookySkeleton spook = new SpookySkeleton(10);
@@ -59,7 +58,7 @@ public class TestInteraction {
 	
 	/*
 	 * Tests RangedDamagePiece, used by Witch
-	 * Should output a HIT when the player is 2 spaces in front and only then.
+	 * Should output a HIT when the player is 2 spaces in front of the Witch and only then.
 	 */
 	@Test
 	public void testRangedDamageInteraction() {
