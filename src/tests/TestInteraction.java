@@ -11,6 +11,7 @@ import levelPieces.Ghost;
 import levelPieces.JackOLantern;
 import levelPieces.Spikes;
 import levelPieces.SpookySkeleton;
+import levelPieces.Witch;
 import levelPieces.Zombie;
 
 public class TestInteraction {
@@ -55,4 +56,17 @@ public class TestInteraction {
 		assertEquals(lantern.interact(gameBoard, 10), InteractionResult.NONE);
 		assertEquals(lantern.getSymbol(), ' ');
 	}
+	
+	/*
+	 * Tests RangedDamagePiece, used by Witch
+	 * Should output a HIT when the player is 2 spaces in front and only then.
+	 */
+	@Test
+	public void testRangedDamageInteraction() {
+		Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
+		Witch witch = new Witch(10);
+		assertEquals(witch.interact(gameBoard, 8), InteractionResult.HIT);
+		assertEquals(witch.interact(gameBoard, 10), InteractionResult.NONE);
+	}
+	
 }
