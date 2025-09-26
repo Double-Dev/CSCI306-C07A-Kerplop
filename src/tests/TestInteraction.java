@@ -7,6 +7,7 @@ import org.junit.Test;
 import gameEngine.Drawable;
 import gameEngine.GameEngine;
 import gameEngine.InteractionResult;
+import levelPieces.Ghost;
 import levelPieces.JackOLantern;
 import levelPieces.Spikes;
 import levelPieces.SpookySkeleton;
@@ -30,9 +31,21 @@ public class TestInteraction {
 	}
 	
 	/*
+	 * Tests Ghost Interaction
+	 * Should output a KILL when the player is on the same location.
+	 */
+	@Test
+	public void testGhostInteraction() {
+		Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
+		Ghost ghost = new Ghost(10);
+		assertEquals(ghost.interact(gameBoard, 10), InteractionResult.KILL);
+	}
+	
+	/*
 	 * Tests JackOLantern Interaction
 	 *  - Get a point when player is on the same space as a JackOLantern
 	 *  - Player should only get 1 point per interaction with JackOLantern
+	 *  - JackOLantern's symbol should change to ' ' after interaction
 	 */
 	@Test
 	public void testJackOLanternInteraction() {
@@ -40,5 +53,6 @@ public class TestInteraction {
 		JackOLantern lantern = new JackOLantern(10);
 		assertEquals(lantern.interact(gameBoard, 10), InteractionResult.GET_POINT);
 		assertEquals(lantern.interact(gameBoard, 10), InteractionResult.NONE);
+		assertEquals(lantern.getSymbol(), ' ');
 	}
 }
