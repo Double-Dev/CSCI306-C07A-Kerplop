@@ -15,7 +15,7 @@ import gameEngine.Moveable;
  * @author Joseph Chamberlain
  * Date: 9/26/2025
  * Collaborators: N/A
- * Sources: N/A
+ * Sources: https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html
  */
 public class Zombie extends ContactDamagePiece implements Moveable {
 
@@ -28,16 +28,11 @@ public class Zombie extends ContactDamagePiece implements Moveable {
 		// Always moves towards the player if possible, while staying within level boundaries.
 		// Doesn't move into occupied spaces.
 		if (playerLocation < this.getLocation() // Checking if left move is valid
-				&& this.getLocation() >= 0
 				&& gameBoard[Math.max(0, this.getLocation()-1)] == null) {
-			gameBoard[this.getLocation()] = null;
-			this.setLocation(this.getLocation()-1);
+			this.setLocation(gameBoard, this.getLocation()-1);
 		} else if (playerLocation > this.getLocation() // Checking if right move is valid
-				&& this.getLocation() < GameEngine.BOARD_SIZE
 				&& gameBoard[Math.min(GameEngine.BOARD_SIZE-1, this.getLocation()+1)] == null) {
-			gameBoard[this.getLocation()] = null;
-			this.setLocation(this.getLocation()+1);
+			this.setLocation(gameBoard, this.getLocation()+1);
 		}
-		gameBoard[this.getLocation()] = this;
 	}
 }

@@ -1,5 +1,8 @@
 package levelPieces;
 
+import java.util.Random;
+import java.util.random.*;
+
 import gameEngine.Drawable;
 import gameEngine.GameEngine;
 import gameEngine.InteractionResult;
@@ -15,10 +18,12 @@ import gameEngine.Moveable;
  * @author Joseph Chamberlain
  * Date: 9/26/2025
  * Collaborators: N/A
- * Sources: N/A
+ * Sources:
+ *  - https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html
+ *  - 
  */
 public class SpookySkeleton extends ContactDamagePiece implements Moveable {
-	private static final java.util.Random rand = new java.util.Random();
+	private static final Random rand = new Random();
 	
 	public SpookySkeleton(int location) {
 		super('W', "Spooky Scary Skeleton!", location);
@@ -29,10 +34,8 @@ public class SpookySkeleton extends ContactDamagePiece implements Moveable {
 		int move = rand.nextInt(5) - 2; // Chooses a random number to move from -2 to 2
 		
 		// Move to the generated amount only if nothing is there.
-		if (gameBoard[this.getLocation() + move] == null) {
-			gameBoard[this.getLocation()] = null;
-			this.setLocation(this.getLocation() + move);
-			gameBoard[this.getLocation()] = this;
+		if (gameBoard[Math.max(0, Math.min(GameEngine.BOARD_SIZE-1, this.getLocation() + move))] == null) {
+			this.setLocation(gameBoard, this.getLocation() + move);
 		}
 	}
 }

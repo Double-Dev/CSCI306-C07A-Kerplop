@@ -33,10 +33,15 @@ public class TestInteraction {
 	public void testContactDamageInteraction() {
 		Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		Zombie zombie = new Zombie(10);
-		Spikes spikes = new Spikes(10);
-		SpookySkeleton spook = new SpookySkeleton(10);
+		assertEquals(zombie.interact(gameBoard, 9), InteractionResult.NONE);
 		assertEquals(zombie.interact(gameBoard, 10), InteractionResult.HIT);
+		
+		Spikes spikes = new Spikes(10);
+		assertEquals(spikes.interact(gameBoard, 9), InteractionResult.NONE);
 		assertEquals(spikes.interact(gameBoard, 10), InteractionResult.HIT);
+		
+		SpookySkeleton spook = new SpookySkeleton(10);
+		assertEquals(spook.interact(gameBoard, 9), InteractionResult.NONE);
 		assertEquals(spook.interact(gameBoard, 10), InteractionResult.HIT);
 	}
 	
@@ -48,6 +53,7 @@ public class TestInteraction {
 	public void testGhostInteraction() {
 		Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		Ghost ghost = new Ghost(10);
+		assertEquals(ghost.interact(gameBoard, 9), InteractionResult.NONE);
 		assertEquals(ghost.interact(gameBoard, 10), InteractionResult.KILL);
 	}
 	
@@ -61,17 +67,18 @@ public class TestInteraction {
 	public void testJackOLanternInteraction() {
 		Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		JackOLantern lantern = new JackOLantern(10);
+		assertEquals(lantern.interact(gameBoard, 9), InteractionResult.NONE);
 		assertEquals(lantern.interact(gameBoard, 10), InteractionResult.GET_POINT);
-		assertEquals(lantern.interact(gameBoard, 10), InteractionResult.NONE);
 		assertEquals(lantern.getSymbol(), ' ');
+		assertEquals(lantern.interact(gameBoard, 10), InteractionResult.NONE);
 	}
 	
 	/*
-	 * Tests RangedDamagePiece, used by Witch
+	 * Tests Witch interacion logic
 	 * Should output a HIT when the player is 2 spaces in front of the Witch and only then.
 	 */
 	@Test
-	public void testRangedDamageInteraction() {
+	public void testWitchInteraction() {
 		Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
 		Witch witch = new Witch(10);
 		assertEquals(witch.interact(gameBoard, 8), InteractionResult.HIT);
