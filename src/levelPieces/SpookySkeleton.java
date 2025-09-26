@@ -17,9 +17,7 @@ import gameEngine.Moveable;
  * @author Joseph Chamberlain
  * Date: 9/26/2025
  * Collaborators: N/A
- * Sources:
- *  - https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html
- *  - 
+ * Sources: https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html
  */
 public class SpookySkeleton extends GamePiece implements Moveable {
 	private static final Random rand = new Random();
