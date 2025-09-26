@@ -9,8 +9,8 @@ import gameEngine.Moveable;
 /**
  * SpookySkeleton class
  * SpookySkeletons can move randomly in a range of 2 spaces to the left to 2 spaces
- * to the right (including staying in the same spot). It hits the player if they
- * interact (move to the same spot).
+ * to the right (including staying in the same spot). It hits the player if they're
+ * on either side of it (doesn't hit if skeleton is on the same space).
  * 1 of our 2 moveable game pieces that interact with the player
  * 
  * @author Deven Layton
