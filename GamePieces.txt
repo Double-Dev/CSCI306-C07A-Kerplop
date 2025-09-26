@@ -3,13 +3,10 @@ Drawable Piece:
 
 Moveable Piece (1/2):
 (W) - SpookySkeletons can move randomly in a range of 2 spaces to the left to 2 spaces
-<<<<<<< HEAD
 to the right (including staying in the same spot). They hit the player if they
 interact (move to the same spot or are 1 spot to the left or right).
-=======
 to the right (including staying in the same spot). They hit the player if they are next
 to them (but not if they're in the same space).
->>>>>>> a38d4a1280df620f7dd19cc550264cebcf1007fe
 
 Moveable Piece (2/2):
 (Z) - Zombies will always try to move 1 space towards the player, but will
