@@ -65,10 +65,14 @@ public abstract class GamePiece implements Drawable {
 	/**
 	 * @param newLocation - location to place piece
 	 */
-	public void setLocation(int newLocation) {
+	public void setLocation(Drawable[] gameBoard, int newLocation) {
 		// Ensure the location remains on the board
 		if (newLocation >= 0 && newLocation < GameEngine.BOARD_SIZE)
+		{
+			gameBoard[this.location] = null;
 			location = newLocation;
+			gameBoard[this.location] = this;
+		}
 	}
 	
 	/**
