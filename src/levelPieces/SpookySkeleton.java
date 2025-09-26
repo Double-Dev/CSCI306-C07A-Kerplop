@@ -21,7 +21,6 @@ import gameEngine.Moveable;
  */
 public class SpookySkeleton extends GamePiece implements Moveable {
 	private static final Random rand = new Random();
-
 	
 	public SpookySkeleton(int location) {
 		super('W', "Spooky Scary Skeleton!", location);
