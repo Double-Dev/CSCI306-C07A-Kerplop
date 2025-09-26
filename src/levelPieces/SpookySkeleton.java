@@ -1,7 +1,6 @@
 package levelPieces;
 
 import java.util.Random;
-import java.util.random.*;
 
 import gameEngine.Drawable;
 import gameEngine.GameEngine;
@@ -45,6 +44,6 @@ public class SpookySkeleton extends GamePiece implements Moveable {
 		if (playerLocation == (this.getLocation() + 1) || playerLocation == (this.getLocation() - 1)) {
 			return InteractionResult.HIT;
 		}
-			return InteractionResult.NONE;
+		return InteractionResult.NONE;
 	}
 }
