@@ -39,10 +39,6 @@ public class TestInteraction {
 		Spikes spikes = new Spikes(10);
 		assertEquals(spikes.interact(gameBoard, 9), InteractionResult.NONE);
 		assertEquals(spikes.interact(gameBoard, 10), InteractionResult.HIT);
-		
-		SpookySkeleton spook = new SpookySkeleton(10);
-		assertEquals(spook.interact(gameBoard, 9), InteractionResult.NONE);
-		assertEquals(spook.interact(gameBoard, 10), InteractionResult.HIT);
 	}
 	
 	/*
@@ -74,7 +70,7 @@ public class TestInteraction {
 	}
 	
 	/*
-	 * Tests Witch interacion logic
+	 * Tests Witch Interaction
 	 * Should output a HIT when the player is 2 spaces in front of the Witch and only then.
 	 */
 	@Test
@@ -85,4 +81,16 @@ public class TestInteraction {
 		assertEquals(witch.interact(gameBoard, 10), InteractionResult.NONE);
 	}
 	
+	/*
+	 * Tests SpookySkeleton Interaction
+	 * Should output a HIT when the player is on either side of it
+	 */
+	@Test
+	public void testSkeletonInteraction() {
+		Drawable[] gameBoard = new Drawable[GameEngine.BOARD_SIZE];
+		SpookySkeleton skeleton = new SpookySkeleton(10);
+		assertEquals(skeleton.interact(gameBoard, 10), InteractionResult.NONE);
+		assertEquals(skeleton.interact(gameBoard, 9), InteractionResult.HIT);
+		assertEquals(skeleton.interact(gameBoard, 11), InteractionResult.HIT);
+	}
 }
